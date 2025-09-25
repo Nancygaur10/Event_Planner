@@ -1,59 +1,112 @@
-Event Planner
-📌 Overview
+# Event Planner - Role-Based Authentication System
 
-This project is a role-based authentication system built with Django, featuring login, signup, and dashboards for users and admins.
+## 📍 Overview
 
-⚙️ Setup and Installation
+This project is a **role-based authentication system** built with **Django**, featuring login, signup, and dashboards for users and admins. Users have roles assigned to them, and access is restricted based on these roles.
 
-Clone the repository
+---
 
-git clone https://github.com/your-username/your-repo.git
-cd your-repo
+## 🔧 Setup and Installation
 
+### 1. Clone the Repository
 
-Create and activate a virtual environment
+```
+git clone https://github.com/Nancygaur10/Event_Planner.git
+cd Event_Planner
+```
 
+### 2. Create and Activate Virtual Environment
+
+```
 python -m venv venv
-source venv/bin/activate   # On Linux/Mac
-venv\Scripts\activate      # On Windows
+# On Linux/Mac
+source venv/bin/activate
+# On Windows
+venv\Scripts\activate
+```
 
+### 3. Install Dependencies
 
-Install dependencies
-
+```
 pip install -r requirements.txt
+```
 
+### 4. Run Database Migrations
 
-Run database migrations
-
+```
 python manage.py makemigrations
 python manage.py migrate
+```
 
+### 5. Create a Superuser (Optional, for Admin Access)
 
-Create a superuser (optional, for admin access)
-
+```
 python manage.py createsuperuser
+```
 
+### 6. Start the Development Server
 
-Start the development server
-
+```
 python manage.py runserver
+```
 
+### 7. Open in Browser
 
-Open your browser at:
+Go to: [http://127.0.0.1:8000/](http://127.0.0.1:8000/)
 
-http://127.0.0.1:8000/
+---
 
-🛠️ Technologies Used
+## 🛠️ Technologies Used
 
-Django – Backend framework chosen for its robust authentication system, ORM, and scalability.
+* **Django** – Backend framework for authentication, ORM, and scalability.
+* **SQLite / PostgreSQL** – Database for managing users and roles (SQLite for development, PostgreSQL recommended for production).
+* **HTML, CSS, Bootstrap** – Frontend for responsive UI.
+* **Python** – Core programming language for clean and rapid development.
 
-SQLite – Database for managing users and roles. SQLite for development.
+---
 
-HTML, CSS, Bootstrap – For responsive front-end design.
+## 📁 Project File Structure
 
-Python – Core programming language for rapid development and clean syntax.
+```
+Event_Planner/
+├─ manage.py
+├─ requirements.txt
+├─ venv/                    # Virtual environment (gitignored)
+├─ db.sqlite3               # Database (gitignored)
+├─ Event_Planner/
+│  ├─ __init__.py
+│  ├─ settings.py
+│  ├─ urls.py
+│  ├─ asgi.py
+│  └─ wsgi.py
+├─ accounts/
+│  ├─ migrations/
+│  ├─ __init__.py
+│  ├─ admin.py
+│  ├─ apps.py
+│  ├─ forms.py
+│  ├─ models.py
+│  ├─ tests.py
+│  └─ views.py
+├─ templates/
+│  ├─ base.html
+│  ├─ login.html
+│  ├─ signup.html
+│  ├─ admin_dashboard.html
+│  └─ user_dashboard.html
+├─ static/
+│  ├─ css/
+│  ├─ js/
+│  └─ images/
+├─ .gitignore
+└─ README.md
+```
 
-📊 ER Diagram
+---
+
+## 📊 ER Diagram
+
+```
 +-------------------+        +-------------------+
 |     CustomUser    |        |       Role        |
 +-------------------+        +-------------------+
@@ -63,40 +116,12 @@ Python – Core programming language for rapid development and clean syntax.
 | password          |        |                   |
 | role_id (FK)      |        |                   |
 +-------------------+        +-------------------+
+```
 
-File Structure
+---
 
-Event_Planner/                  # Root project folder
-├─ manage.py                    # Django project management script
-├─ requirements.txt             # Python dependencies
-├─ venv/                        # Virtual environment (gitignored)
-├─ db.sqlite3                   # SQLite database (gitignored)
-├─ Event_Planner/               # Main project folder
-│  ├─ __init__.py
-│  ├─ settings.py               # Django settings
-│  ├─ urls.py                   # Root URL configuration
-│  ├─ asgi.py
-│  └─ wsgi.py
-├─ accounts/                     # App for user/authentication
-│  ├─ migrations/
-│  │  └─ __init__.py
-│  ├─ __init__.py
-│  ├─ admin.py
-│  ├─ apps.py
-│  ├─ forms.py                  # Signup/Login forms
-│  ├─ models.py                 # CustomUser & Role models
-│  ├─ tests.py
-│  └─ views.py                  # Views for signup, login, dashboards
-├─ templates/                    # HTML templates
-│  ├─ base.html                  # Base template
-│  ├─ login.html
-│  ├─ signup.html
-│  ├─ admin_dashboard.html
-│  └─ user_dashboard.html
-├─ static/                       # Static files (CSS, JS, images)
-│  ├─ css/
-│  │  └─ style.css
-│  ├─ js/
-│  └─ images/
-├─ .gitignore
-└─ README.md
+## 📍 Notes
+
+* Make sure to **activate the virtual environment** before running server commands.
+* `.gitignore` excludes virtual environment and database files.
+* You can switch to **PostgreSQL** for production by updating `settings.py`.
