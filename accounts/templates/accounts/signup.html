@@ -1,0 +1,24 @@
+{% extends "accounts_base.html" %}
+{% block content %}
+    <h2 class="text-primary">Sign Up Page</h2>
+    <form method="post" action="{% url 'signup' %}">
+        {% csrf_token %}
+        <input type="text" name="username" class="form-control mb-3" placeholder="Username" required>
+
+        <select name="role" id="" class="form-select mb-3" required>
+            <option value="admin">Admin</option>
+            <option value="user">User</option>
+        </select>
+
+        <input type="password" name="password1" class="form-control mb-3" placeholder="Password" required>
+        <input type="password" name="password2" class="form-control mb-3" placeholder="Confirm Password" required>
+        
+        <div class="d-grid mt-3">
+            <button type="submit" class="btn btn-primary">Signup</button>
+        </div>
+    </form>
+    <p class="text-center mt-3">
+        <a href="{% url 'login' %}">Already have an account? Login</a>
+    </p>
+</div>
+{% endblock %}

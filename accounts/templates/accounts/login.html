@@ -1,0 +1,14 @@
+{% extends "accounts_base.html" %}
+{% block content %}
+<h2 class="text-primary">Login Page</h2>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p}}
+        <div class="d-grid mt-3">
+            <button type="submit" class="btn btn-primary">Login</button>
+        </div>
+</form>
+<a href="{% url 'signup' %}">Don't have an account? Signup</a>
+{% endblock %}
+
+
