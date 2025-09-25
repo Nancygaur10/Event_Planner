@@ -1,0 +1,57 @@
+body {
+  background-color: #f5f7fa;
+}
+
+.navbar {
+  background: #287bff;
+}
+
+.navbar-brand,
+.navbar-text {
+  color: #fff !important;
+}
+
+.form-card {
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.card-body {
+  background-color: #fff;
+}
+
+.form-label {
+  font-weight: 500;
+}
+
+.btn-primary {
+  border-radius: 5px;
+  padding: 8px 20px;
+}
+
+.btn-outline-secondary {
+  border-radius: 5px;
+  padding: 8px 20px;
+  color: #287bff;
+  border-color: #287bff;
+}
+
+.btn-outline-secondary:hover {
+  background-color: #e6f0ff;
+}
+
+.index-btn{
+    color: #368FD6;
+    background-color: white;
+    border: none;
+    padding: 6px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.index-btn:hover{
+    color: #368FD6;
+    background-color: white;
+    transform: translateY(-2px);
+}

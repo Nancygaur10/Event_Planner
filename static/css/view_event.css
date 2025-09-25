@@ -1,0 +1,68 @@
+body {
+  background-color: #f5f7fa;
+}
+
+.navbar {
+  background: #287bff;
+}
+
+.navbar-brand,
+.navbar-text {
+  color: #fff !important;
+}
+
+.card {
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.rsvp-img {
+  height: 250px;
+  object-fit: cover;
+}
+
+.card-body {
+  background-color: #fff;
+}
+
+.rsvp-btn {
+  flex: 1;
+  background-color: #287bff;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 0;
+}
+
+.rsvp-btn:hover {
+  background-color: #1e5dcc;
+}
+
+.rsvp-btn-outline {
+  flex: 1;
+  background-color: transparent;
+  color: #287bff;
+  border: 1px solid #287bff;
+  border-radius: 8px;
+  padding: 10px 0;
+}
+
+.rsvp-btn-outline:hover {
+  background-color: #e6f0ff;
+}
+
+.index-btn{
+    color: #368FD6;
+    background-color: white;
+    border: none;
+    padding: 6px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.index-btn:hover{
+    color: #368FD6;
+    background-color: white;
+    transform: translateY(-2px);
+}

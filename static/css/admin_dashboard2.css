@@ -1,0 +1,39 @@
+body {
+  background-color: #f5f7fa;
+}
+
+.navbar {
+  background: #287bff;
+}
+
+.navbar-brand, .nav-link, .navbar-text {
+  color: #fff !important;
+}
+
+.card {
+  border-radius: 15px;
+  box-shadow: 0px 3px 10px rgba(0,0,0,0.1);
+}
+
+.event-img {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  height: 180px;
+  object-fit: cover;
+}
+
+.index-btn{
+    color: #368FD6;
+    background-color: white;
+    border: none;
+    padding: 6px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.index-btn:hover{
+    color: #368FD6;
+    background-color: white;
+    transform: translateY(-2px);
+}
